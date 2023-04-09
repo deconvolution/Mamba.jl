@@ -115,7 +115,7 @@ function nuts_sub!(v::NUTSVariate, epsilon::Real, logfgrad::Function)
     end
     j += 1
     n += nprime
-    s = sprime && nouturn(xminus, xplus, rminus, rplus)
+    s = sprime && nouturn(xminus, xplus, rminus, rplus) && j<=4
     v.tune.alpha, v.tune.nalpha = alpha, nalpha
   end
   v
